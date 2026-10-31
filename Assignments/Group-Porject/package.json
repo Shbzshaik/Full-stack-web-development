@@ -4,15 +4,16 @@
   "private": true,
   "type": "module",
   
-"scripts": {
-  "dev": "concurrently -n \"API,WEB\" -c \"blue,green\" \"node server.js\" \"vite client\"",
-  "client": "vite client",
-  "server": "node server.js",
-  "build": "vite build client",
-  "preview": "vite preview client",
-  "seed": "node -e \"import('./server.js').then(m => m.runSeedCommand())\"",
-  "test": "vitest run"
-},
+  "scripts": {
+    "dev": "concurrently -n \"API,WEB\" -c \"blue,green\" \"node server.js\" \"vite client\"",
+    "client": "vite client",
+    "server": "node server.js",
+    "start": "node server.js",
+    "build": "vite build client",
+    "preview": "vite preview client",
+    "seed": "node -e \"import('./server/server.js').then(m => m.runSeedCommand())\"",
+    "test": "vitest run --config client/vite.config.js"
+  },
 
   "dependencies": {
     "bcryptjs": "^2.4.3",

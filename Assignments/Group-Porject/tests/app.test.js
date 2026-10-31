@@ -13,7 +13,7 @@ import {
   signToken,
   acquireResourceLock,
   releaseResourceLock,
-} from '../server.js';
+} from '../server/server.js';
 
 let mongoServer;
 let adminUser;
@@ -646,7 +646,7 @@ describe('Notifications & Analytics Reports', () => {
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import App, { AuthProvider, ToastProvider } from '../src/App.jsx';
+import App, { AuthProvider } from '../client/src/App.jsx';
 
 describe('Frontend React UI & Component Tests', () => {
   it('Renders application brand and header correctly', async () => {
